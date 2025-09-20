@@ -1,0 +1,4 @@
+@import "tailwindcss";
+
+/* Opcional: suavizado de tipografía */
+:root { color-scheme: dark; }
