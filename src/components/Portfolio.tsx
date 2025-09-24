@@ -1,21 +1,8 @@
 import { useMemo } from "react";
 import { motion, type Variants } from "framer-motion";
-import {
-  Github,
-  Linkedin,
-  Mail,
-  Briefcase,
-  Code2,
-  Cloud,
-  Globe,
-  FileCode2,
-  Phone,
-  MapPin,
-  Server,
-  Cpu,
-  Database,
-  Stars,
-} from "lucide-react";
+import { Github, Linkedin, Mail, Globe, MapPin, Stars } from "lucide-react";
+
+import profile from "../assets/img/perfil.png";
 
 /**
  * Tip: úsalo como App.tsx en un proyecto Vite + React + TS.
@@ -43,12 +30,49 @@ const item: Variants = {
 export default function Portfolio() {
   const skills = useMemo(
     () => [
-      { title: "Backend", items: ["C#", ".NET / .NET Core", "ASP.NET Web API", "EF Core", "LINQ", "REST"] },
-      { title: "Frontend", items: ["Angular", "React", "HTML5", "CSS", "Bootstrap", "jQuery"] },
-      { title: "Arquitectura", items: ["Clean Architecture", "CQRS", "Mediator", "Microservicios", "UML"] },
-      { title: "Cloud & DevOps", items: ["AWS (S3/EC2/CloudWatch)", "Azure (Form Recognizer)", "GCP (Document AI)", "IIS", "Web Deploy"] },
-      { title: "Datos", items: ["SQL Server", "PostgreSQL", "MongoDB", "SQLite"] },
-      { title: "Testing & Tools", items: ["Selenium (C#)", "Git", "VS/VS Code", "DBeaver", "SSMS"] },
+      {
+        title: "Backend",
+        items: [
+          "C#",
+          ".NET / .NET Core",
+          "ASP.NET Web API",
+          "EF Core",
+          "LINQ",
+          "REST",
+        ],
+      },
+      {
+        title: "Frontend",
+        items: ["Angular", "React", "HTML5", "CSS", "Bootstrap", "jQuery"],
+      },
+      {
+        title: "Arquitectura",
+        items: [
+          "Clean Architecture",
+          "CQRS",
+          "Mediator",
+          "Microservicios",
+          "UML",
+        ],
+      },
+      {
+        title: "Cloud & DevOps",
+        items: [
+          "AWS (S3/EC2/CloudWatch)",
+          "Azure (Form Recognizer)",
+          "GCP (Document AI)",
+          "IIS",
+          "Web Deploy",
+        ],
+      },
+      {
+        title: "Datos",
+        items: ["SQL Server", "PostgreSQL", "MongoDB", "SQLite"],
+      },
+      {
+        title: "Testing & Tools",
+        items: ["Selenium (C#)", "Git", "VS/VS Code", "DBeaver", "SSMS"],
+      },
     ],
     []
   );
@@ -78,13 +102,21 @@ export default function Portfolio() {
       company: "Solar Consultores S.A.C",
       role: "Analista Programador (.NET C#)",
       period: "Nov 2018 – Ene 2019 | Lima, Perú",
-      bullets: ["Levantamiento y diseño técnico; modelado de base de datos"],
+      bullets: [
+        "Levantamiento de requerimientos, análisis y diseño técnico de módulos.",
+        "Modelado de base de datos (tablas, relaciones, índices) y optimización de queries.",
+        "Desarrollo de componentes en ASP.NET (C#) siguiendo principios SOLID.",
+      ],
     },
     {
       company: "Corporate International Partners S.A.C",
       role: "Programador .NET C#",
       period: "Ene 2018 – Oct 2018 | Lima, Perú",
-      bullets: ["Desarrollo multiárea, responsive y pruebas funcionales"],
+      bullets: [
+        "Desarrollo de funcionalidades para sitios corporativos y back-office.",
+        "Responsive UI con HTML5, CSS, Bootstrap, jQuery y validaciones en cliente.",
+        "Integración de APIs REST y mantenimiento correctivo/preventivo."
+      ],
     },
   ];
 
@@ -122,13 +154,23 @@ export default function Portfolio() {
         <div className="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <Stars className="size-5" />
-            <span className="font-semibold tracking-tight">Ysaac Luis Rios Huarcaya</span>
+            <span className="font-semibold tracking-tight">
+              Ysaac Luis Rios Huarcaya
+            </span>
           </div>
           <nav className="flex items-center gap-3 text-sm">
-            <a href="#experience" className="hover:text-indigo-300">Experiencia</a>
-            <a href="#projects" className="hover:text-indigo-300">Proyectos</a>
-            <a href="#skills" className="hover:text-indigo-300">Skills</a>
-            <a href="#contact" className="hover:text-indigo-300">Contacto</a>
+            <a href="#experience" className="hover:text-indigo-300">
+              Experiencia
+            </a>
+            <a href="#projects" className="hover:text-indigo-300">
+              Proyectos
+            </a>
+            <a href="#skills" className="hover:text-indigo-300">
+              Skills
+            </a>
+            <a href="#contact" className="hover:text-indigo-300">
+              Contacto
+            </a>
           </nav>
         </div>
       </header>
@@ -148,10 +190,12 @@ export default function Portfolio() {
                 Full-Stack .NET · Clean Architecture · CQRS
               </p>
               <h1 className="text-4xl md:text-5xl font-bold tracking-tight leading-tight">
-                Construyo <strong>APIs</strong> y <strong>productos web</strong> escalables en .NET, Angular y la nube.
+                Construyo <strong>APIs</strong> y <strong>productos web</strong>{" "}
+                escalables en .NET, Angular y la nube.
               </h1>
               <p className="mt-4 text-zinc-300 max-w-prose">
-                7+ años en banca, e-commerce y facturación electrónica. Me enfoco en performance, mantenibilidad y UX moderna.
+                7+ años en banca, e-commerce y facturación electrónica. Me
+                enfoco en performance, mantenibilidad y UX moderna.
               </p>
               <div className="mt-6 flex flex-wrap items-center gap-3">
                 <a
@@ -161,7 +205,7 @@ export default function Portfolio() {
                   <Mail className="size-4" /> Contáctame
                 </a>
                 <a
-                  href="https://github.com/"
+                  href="https://github.com/ma77oma"
                   target="_blank"
                   rel="noreferrer"
                   className="inline-flex items-center gap-2 rounded-xl bg-white/5 px-4 py-2 font-medium hover:bg-white/10"
@@ -169,7 +213,7 @@ export default function Portfolio() {
                   <Github className="size-4" /> GitHub
                 </a>
                 <a
-                  href="https://linkedin.com/"
+                  href="https://www.linkedin.com/in/ysaac-luis-rios-377203173/"
                   target="_blank"
                   rel="noreferrer"
                   className="inline-flex items-center gap-2 rounded-xl bg-white/5 px-4 py-2 font-medium hover:bg-white/10"
@@ -181,50 +225,33 @@ export default function Portfolio() {
                 <span className="inline-flex items-center gap-1 bg-white/5 rounded-full px-3 py-1">
                   <MapPin className="size-3" /> Lima, Perú
                 </span>
-                <span className="inline-flex items-center gap-1 bg-white/5 rounded-full px-3 py-1">
-                  <Phone className="size-3" /> 940 882 791
-                </span>
+
                 <span className="inline-flex items-center gap-1 bg-white/5 rounded-full px-3 py-1">
                   <Globe className="size-3" /> Español · Inglés técnico
                 </span>
               </div>
             </div>
 
-            {/* Icon grid animado */}
-            <motion.div
+            <motion.figure
               initial={{ scale: 0.95, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.5 }}
               className="relative"
             >
-              <div className="aspect-square rounded-3xl bg-gradient-to-br from-indigo-500/20 to-fuchsia-500/20 ring-1 ring-white/10 p-1">
-                <div className="h-full w-full rounded-2xl bg-zinc-950 grid place-items-center">
-                  <div className="grid grid-cols-3 gap-4 p-6">
-                    {[
-                      Code2,
-                      Server,
-                      Database,
-                      Cloud,
-                      Cpu,
-                      FileCode2,
-                      Briefcase,
-                      Globe,
-                      Stars,
-                    ].map((Icon, i) => (
-                      <motion.div
-                        key={i}
-                        variants={item}
-                        initial="hidden"
-                        animate="show"
-                        className="h-20 w-20 rounded-xl bg-white/5 ring-1 ring-white/10 grid place-items-center"
-                      >
-                        <Icon className="size-7" />
-                      </motion.div>
-                    ))}
-                  </div>
+              <div className="aspect-[4/5] rounded-3xl bg-gradient-to-br from-indigo-500/20 to-fuchsia-500/20 ring-1 ring-white/10 p-1">
+                <div className="h-full w-full overflow-hidden rounded-2xl ring-1 ring-white/10">
+                  <img
+                    src={profile}
+                    alt="Ysaac Luis Rios Huarcaya — Full-Stack .NET"
+                    className="h-full w-full object-cover"
+                    loading="lazy"
+                  />
                 </div>
               </div>
-            </motion.div>
+              <div className="absolute -bottom-3 -right-3 rounded-xl bg-white/10 backdrop-blur px-3 py-1 text-xs ring-1 ring-white/15">
+                Disponible para proyectos
+              </div>
+            </motion.figure>
           </motion.div>
         </div>
       </section>
@@ -304,7 +331,10 @@ export default function Portfolio() {
               <p className="mt-2 text-sm text-zinc-300">{p.desc}</p>
               <div className="mt-4 flex flex-wrap gap-2 text-xs text-zinc-300">
                 {p.tags.map((t) => (
-                  <span key={t} className="rounded-full bg-white/5 px-2.5 py-1 ring-1 ring-white/10">
+                  <span
+                    key={t}
+                    className="rounded-full bg-white/5 px-2.5 py-1 ring-1 ring-white/10"
+                  >
                     {t}
                   </span>
                 ))}
@@ -358,23 +388,27 @@ export default function Portfolio() {
 
         <div className="mt-6 grid md:grid-cols-2 gap-6">
           <div className="rounded-2xl bg-white/5 ring-1 ring-white/10 p-6">
-            <p className="text-zinc-300">¿Te interesa colaborar? Escríbeme y coordinamos una llamada.</p>
+            <p className="text-zinc-300">
+              ¿Te interesa colaborar? Escríbeme y coordinamos una llamada.
+            </p>
             <div className="mt-4 space-y-2 text-sm">
               <div className="flex items-center gap-2">
                 <Mail className="size-4" />
-                <a className="hover:text-indigo-300" href="mailto:ysaacrioshuarcaya@gmail.com">
+                <a
+                  className="hover:text-indigo-300"
+                  href="mailto:ysaacrioshuarcaya@gmail.com"
+                >
                   ysaacrioshuarcaya@gmail.com
                 </a>
               </div>
               <div className="flex items-center gap-2">
-                <Phone className="size-4" />
-                <a className="hover:text-indigo-300" href="tel:+51940882791">
-                  +51 940 882 791
-                </a>
-              </div>
-              <div className="flex items-center gap-2">
                 <Linkedin className="size-4" />
-                <a className="hover:text-indigo-300" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">
+                <a
+                  className="hover:text-indigo-300"
+                  href="https://www.linkedin.com/in/ysaac-luis-rios-377203173/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   LinkedIn
                 </a>
               </div>
@@ -406,7 +440,6 @@ export default function Portfolio() {
             >
               Enviar
             </button>
-            <p className="text-xs text-zinc-400">*Formulario demo (sin backend). Puedes conectar a una API/EmailJS.</p>
           </motion.form>
         </div>
       </section>
@@ -414,7 +447,8 @@ export default function Portfolio() {
       {/* FOOTER */}
       <footer className="border-t border-white/5">
         <div className="mx-auto max-w-6xl px-4 py-8 text-sm text-zinc-400">
-          © {new Date().getFullYear()} Ysaac Luis Rios Huarcaya — Full-Stack .NET
+          © {new Date().getFullYear()} Ysaac Luis Rios Huarcaya — Full-Stack
+          .NET
         </div>
       </footer>
     </div>
